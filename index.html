@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="THE GUDDI GAME - Ett roligt memory spel"
+    />
+    <meta
+      name="keywords"
+      content="guddi game, memory spel, färdigheter, matchningsspel"
+    />
+    <meta name="author" content="Guddi" />
+    <title>THE GUDDI GAME</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo:wght@400;600&family=Sora:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="fullscreen-mode">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <div class="game-overlay" id="game-overlay">
+      <div class="overlay-content">
+        <h1>THE GUDDI GAME</h1>
+
+        <p class="game-description">
+          Matcha färdigheter med beskrivningar i detta memory-spel!
+        </p>
+
+        <div class="game-controls">
+          <button id="start-new-game">Starta nytt spel</button>
+          <button id="toggle-fullscreen">Fullskärm</button>
+        </div>
+
+        <div class="high-score-section">
+          <h3>High Score</h3>
+          <div class="high-score-list" id="high-score-list">
+            <div class="score-entry">*Guddi: 264 sek</div>
+            <div class="score-entry">*Nisse: 168 sek</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="fullscreen-game">
+      <div class="game-board" id="game-board">
+        <!-- Kort kommer att genereras dynamiskt här av JavaScript -->
+      </div>
+
+      <!-- Game stats moved to bottom during gameplay -->
+      <div class="game-stats-bottom hidden" id="game-stats-bottom">
+        <div class="stats-container">
+          <div class="score-container">
+            <span>Poäng: </span>
+            <span id="score">0</span>
+          </div>
+          <div class="timer-container">
+            <span>Tid: </span>
+            <span id="timer">0</span>
+          </div>
+          <div class="moves-container">
+            <span>Drag: </span>
+            <span id="moves">0</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="scripts/game.js"></script>
+  </body>
+</html>
