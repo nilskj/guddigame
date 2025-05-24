@@ -339,7 +339,7 @@ button:active {
 
 .card-back {
   background-color: rgba(230, 214, 214, 0.95);
-  background-image: url("../assets/background-image.png");
+  background-image: url("../assets/background-image.jpeg");
   background-size: cover;
   background-position: center;
   color: var(--button-text);
